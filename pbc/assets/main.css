@@ -1,0 +1,76 @@
+body{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.node{
+    margin-left: 20px;
+    border-left: 1px dotted grey;
+    /* display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 20px, 20px; */
+}
+.node input{
+    border: none;
+    width: 60px;
+    color: grey;
+}
+.val{
+    width: auto;
+}
+.node input:hover{
+    border-bottom: 1px solid purple;
+}
+.node input:focus{
+    width: auto;
+    background-color: beige;
+}
+
+.node input:disabled{
+    color: #fc6500;
+    background-color: white;
+}
+
+.node button{
+    border: none;
+    background: white;
+}
+.val:before{
+    content: "\"";
+    color: green;
+}
+.node::after{
+    content: ",";
+    color: green;
+}
+.node.arr::before{
+    content: "[";
+    color: grey;
+}
+.node.arr::after{
+    content: "]";
+    color: grey;
+}
+.node.obj::before{
+    content: "{";
+    color: purple;
+}
+.node.obj::after{
+    content: "}";
+    color: purple;
+}
+input.key{
+    color: black;
+}
+input.val{
+    color: green;
+}
+
+.node input.string{
+    color: green;
+}
+.node input.int{
+    color: blue;
+}
+.arr .node input{
+    padding-left: 10px;
+}
